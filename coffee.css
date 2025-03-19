@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family"=Montserrat:400,800);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: boarder-box;
+    text-decoration: none;
+    transition: 4s(linear);
+}
+body{
+    height: 100vh;
+    background: url(Kopi\ Starbucks.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+header{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 20px 6%;
+    background-color: rgb(164, 103, 33);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+nav{
+    position: relative;
+    left: -10%;
+}
+header .logo{
+    font-size: 35px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: rgb(73, 36, 6);
+    cursor: pointer;
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+}
+header nav a{
+    display: inline-block;
+    position: relative;
+    font-size:  18px;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    color: rgb(73, 36, 6);
+    transition: .3s ease-in;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.1s *var(--i));
+    opacity: 0;
+}
+header nav a:focus{
+    color: rgb(11, 11, 10);
+}
+header nav a::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0%;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(227, 172, 127);
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+header nav a:hover::before{
+    width: 100%;
+}
+.Home{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0 , 0 , 0 ,0.4);
+    text-align: center;
+}
+.Home h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(227, 172, 127);
+    text-transform: capitalize;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .5s ;
+    opacity: 0;
+}
+.Home p{
+    text-align: center;
+    font: 20px;
+    font-size: large;
+    color: rgb(227, 172, 127);
+    margin: 20px 30px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .6s ;
+    opacity: 0;
+}
+.Home .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color:rgb(227, 172, 127);
+    color:rgba(0 , 0 , 0 ,1);
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: .4s ease-in-out;
+    font-weight: 600;
+    animation: slideTop 1s ease-in;
+ }
+.Home .btn:hover{
+    transform: scale(0.90);
+    opacity: 40%;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes slideTop{
+    0%{
+        transform: translatey(100px);
+        opacity:0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes slideBottom{
+    0%{
+        transform: translatey(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+
